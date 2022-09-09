@@ -15,10 +15,10 @@ int main(void)
 
 	for (i = 0; i < 26; i++)
 		putchar(alphabet + i);
-	int i;
+	int j;
 
-	for (i = 0; i < 26; i++)
-		putchar(upper_case + i);
+	for (j = 0; i < 26; i++)
+		putchar(upper_case + j);
 	putchar(10);
 	/*Use putc in the for loop*/
 	return (0);

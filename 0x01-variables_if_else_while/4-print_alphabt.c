@@ -10,7 +10,9 @@ int main(void)
 	/*Declare an int with the value 96*/
 	int alphabet = 97;
 	/*Create a for loop with 25*/
-	for (int i = 0; i < 26; i++)
+	int i;
+
+	for (i = 0; i < 26; i++)
 	{
 		if (i != 4 && i != 16)
 			putchar(alphabet + i);

@@ -12,7 +12,7 @@ int main(void)
 	/*Create a for loop with 25*/
 	int i;
 
-	for (int i = 0; i < 26; i++)
+	for (i = 0; i < 26; i++)
 		putchar(reverse - i);
 	putchar(10);
 	/*Use putc in the for loop*/
