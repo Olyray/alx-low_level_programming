@@ -16,7 +16,7 @@ int main(void)
 
 	for (i = 0; i < 26; i++)
 		putchar(alphabet + i);
-	for (j = 0; i < 26; i++)
+	for (j = 0; j < 26; j++)
 		putchar(upper_case + j);
 	putchar(10);
 	/*Use putc in the for loop*/
