@@ -12,12 +12,11 @@ int main(void)
 	int alpha = 97;
 	/*Create a for loop with 25*/
 	int i;
-
-	for (int i = 0; i < 10; i++)
-		putchar(numeric + i);
 	int j;
 
-	for (int j = 0; j < 6; j++)
+	for (i = 0; i < 10; i++)
+		putchar(numeric + i);
+	for (j = 0; j < 6; j++)
 		putchar(alpha + j);
 	putchar(10);
 	/*Use putc in the for loop*/

@@ -12,11 +12,10 @@ int main(void)
 	int upper_case = 65;
 	/*Create a for loop with 25*/
 	int i;
+	int j;
 
 	for (i = 0; i < 26; i++)
 		putchar(alphabet + i);
-	int j;
-
 	for (j = 0; i < 26; i++)
 		putchar(upper_case + j);
 	putchar(10);
