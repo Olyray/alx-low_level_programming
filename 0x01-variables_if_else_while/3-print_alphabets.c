@@ -11,9 +11,13 @@ int main(void)
 	int alphabet = 97;
 	int upper_case = 65;
 	/*Create a for loop with 25*/
-	for (int i = 0; i < 26; i++)
+	int i;
+
+	for (i = 0; i < 26; i++)
 		putchar(alphabet + i);
-	for (int i = 0; i < 26; i++)
+	int i;
+
+	for (i = 0; i < 26; i++)
 		putchar(upper_case + i);
 	putchar(10);
 	/*Use putc in the for loop*/
