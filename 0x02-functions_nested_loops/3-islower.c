@@ -13,6 +13,6 @@ int _islower(int c)
 	
 	if (checker > 0)
 		return(1);
-	else if (checker == 0)
+	else
 		return(0);
 }
