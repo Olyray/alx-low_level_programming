@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <ctype.h>
-int _islower(int c);
+#include <stdlib.h>
+#include "main.h"
 
+int _islower(int c);
+int _isalpha(int c);
+int print_sign(int n);
+int _abs(int);
 /**
  * main - check the code.
  *
@@ -10,16 +15,17 @@ int _islower(int c);
 
 int main(void)
 {
-	int r;
+    int r;
 
-    	r = _islower('H');
-    	putchar(r + '0');
-    	r = _islower('o');
-    	putchar(r + '0');
-    	r = _islower(108);
-    	putchar(r + '0');
-    	putchar('\n');
-    	return (0);    
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
 }
 
 /**
@@ -28,12 +34,10 @@ int main(void)
   * Return: It returns 1 if it's a lower case and zero if it isn't. 
   */
 
-int _islower(int c)
-{
-	int checker = islower(c);
-	
-	if (checker > 0)
-		return(1);
-	else if (checker == 0)
-		return(0);
+int _abs(int c )
+{ 
+	int value;
+
+	value = abs(c);
+	return (value);
 }
