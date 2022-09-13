@@ -6,26 +6,19 @@
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
-int _abs(int);
+int print_last_digit(int n);
+void times_table(void);
+
+
 /**
  * main - check the code.
- *
  * Return: Always 0.
  */
 
 int main(void)
 {
-    int r;
-
-    r = _abs(-1);
-    printf("%d\n", r);
-    r = _abs(0);
-    printf("%d\n", r);
-    r = _abs(1);
-    printf("%d\n", r);
-    r = _abs(-98);
-    printf("%d\n", r);
-    return (0);
+	times_table();
+    	return (0);   
 }
 
 /**
@@ -34,10 +27,30 @@ int main(void)
   * Return: It returns 1 if it's a lower case and zero if it isn't. 
   */
 
-int _abs(int c )
-{ 
-	int value;
+void times_table(void)
+{	
+	int i;
+	int j;
+	int x;
 
-	value = abs(c);
-	return (value);
+	/*Create a for loop of 9 with i*/
+	for (i = 0; i < 10; i++)
+	{
+		/*Create a for loop of 9 with j*/
+		for (j = 0; j < 10; j++)
+		{
+		   	/*x = i * j*/
+			x = i * j;
+		  	/*printchar x*/
+			if (x <= 9)
+				putchar(x + '0');
+			else
+				putchar((x / 10) + '0');
+				putchar((x % 10) + '0');
+
+			putchar(32);
+		}
+	     	/*print new line*/
+		putchar('\n');
+	}
 }
