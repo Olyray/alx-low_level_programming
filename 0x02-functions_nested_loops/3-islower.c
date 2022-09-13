@@ -9,10 +9,10 @@
 
 int _islower(int c)
 {
-	int checker = islower(c);i
+	int checker = islower(c);
 	
-	if (checker > 0):
+	if (checker > 0)
 		return(1);
-	else if (checker == 0):
+	else if (checker == 0)
 		return(0);
 }
