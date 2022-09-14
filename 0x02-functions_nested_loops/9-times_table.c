@@ -24,11 +24,18 @@ void times_table(void)
 			x = i * j;
 			/*printchar x*/
 			if (x <= 9)
+			{
 				putchar(x + '0');
+				putchar(',');
+				putchar(' ');
+				putchar(' ');
+			}
 			else
 			{
 				putchar((x / 10) + '0');
 				putchar((x % 10) + '0');
+				putchar(',');
+				putchar(' ');
 			}
 
 			putchar(32);
