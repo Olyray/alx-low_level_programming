@@ -8,6 +8,7 @@ int _isalpha(int c);
 int print_sign(int n);
 int print_last_digit(int n);
 void times_table(void);
+void print_to_98(int n);
 
 
 /**
@@ -17,8 +18,12 @@ void times_table(void);
 
 int main(void)
 {
-	times_table();
-    	return (0);   
+    print_to_98(0);
+    print_to_98(98);
+    print_to_98(111);
+    print_to_98(81);
+    print_to_98(-10);
+    return (0);
 }
 
 /**
@@ -27,32 +32,26 @@ int main(void)
   * Return: It returns 1 if it's a lower case and zero if it isn't. 
   */
 
-void times_table(void)
-{	
-	int i;
-	int j;
-	int x;
+void print_to_98(int n)
+{
+        if (n > 98)
+        {
+                int i;
 
-	/*Create a for loop of 9 with i*/
-	for (i = 0; i < 10; i++)
-	{
-		/*Create a for loop of 9 with j*/
-		for (j = 0; j < 10; j++)
+                for (i = n; i >= 98; i--)
 		{
-		   	/*x = i * j*/
-			x = i * j;
-		  	/*printchar x*/
-			if (x <= 9)
-				putchar(x + '0');
-			else
-			{
-				putchar((x / 10) + '0');
-				putchar((x % 10) + '0');
-			}
-
-			putchar(32);
+                        printf("%i, ", i);
+			printf("\n");
 		}
-	     	/*print new line*/
-		putchar('\n');
-	}
+        }
+        else
+        {
+                int j;
+
+                for (j = n; j <= 98; j++)
+		{
+                        printf("%i, ", j);
+			printf("\n");
+		}
+        }
 }
