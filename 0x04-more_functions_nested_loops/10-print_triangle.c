@@ -7,9 +7,12 @@
   */
 void print_triangle(int size)
 {
-	for (int i = size; i >= 1; i--)
+	int i;
+	int j;
+
+	for (i = size; i >= 1; i--)
 	{
-		for (int j = 0; j < size; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (j < i - 1)
 				putchar(' ');
