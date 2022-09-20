@@ -1,18 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * puts2 - print the other string
+  * @str: The target string
   */
 
-void swap_int(int *a, int *b)
+void puts2(char *str)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	int string_length = strlen(str);
+	int i;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	for (i = 0; i < string_length; i += 2)
+	{
+		printf("%c", str[i]);
+	}
+	printf("\n");
 }

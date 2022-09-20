@@ -1,18 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * puts_half - print half of a string
+  * @str: The string in question
   */
 
-void swap_int(int *a, int *b)
+void puts_half(char *str)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	int string_length = strlen(str);
+	int i;
+	int increment;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	if (string_length % 2 == 0)
+		increment = string_length / 2;
+	else
+		increment = (string_length - 1) / 2;
+
+	for (i = increment; i < increment * 2; i++)
+	{
+		printf("%c", str[i]);
+	}
+	printf("\n");
 }
