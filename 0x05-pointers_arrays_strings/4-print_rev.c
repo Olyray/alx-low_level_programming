@@ -1,18 +1,25 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * print_rev - reverse a string
+  * @s: The string to be reversed
   */
 
-void swap_int(int *a, int *b)
+void print_rev(char *s)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	/*Create an array of the length of the string*/
+	int string_length = strlen(s);
+	char reversed[string_length];
+	int i;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	/*Create a for loop with the length of the array*/
+	for (i = 0; i < string_length; i++)
+		/**
+		  * append the string into the created
+		  * empty string array starting from stringlen - 1
+		  */
+		reversed[i] = s[string_length - (i + 1)];
+	/*Print the new string*/
+	printf("%s\n", reversed);
 }

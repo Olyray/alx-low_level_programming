@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
   * _strlen - swap the paramenters
@@ -8,9 +9,7 @@
 
 int _strlen(char *s)
 {
-	int i = 3;
-
-	printf("This is s: %c\n", *s);
+	int i = strlen(s);
 
 	return (i);
 }

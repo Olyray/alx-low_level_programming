@@ -1,18 +1,11 @@
 #include <stdio.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * _puts - swap the paramenters
+  * @str: The string to be printed
   */
 
-void swap_int(int *a, int *b)
+void _puts(char *str)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
-
-	*c = forty_two;
-	*d = ninety_eight;
+	puts(str);
 }
