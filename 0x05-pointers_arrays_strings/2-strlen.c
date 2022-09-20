@@ -1,18 +1,14 @@
 #include <stdio.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * _strlen - swap the paramenters
+  * @s: The string to be counted
+  * Return: The size of the int
   */
 
-void swap_int(int *a, int *b)
+int _strlen(char *s)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	int i = 3;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	return (i);
 }
