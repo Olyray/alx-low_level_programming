@@ -10,7 +10,7 @@ void print_rev(char *s)
 {
 	/*Create an array of the length of the string*/
 	int string_length = strlen(s);
-	char reversed[string_length];
+	char reversed[200];
 	int i;
 
 	/*Create a for loop with the length of the array*/
