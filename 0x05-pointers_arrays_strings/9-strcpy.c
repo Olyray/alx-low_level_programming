@@ -1,18 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * *_strcpy - swap the paramenters
+  * @dest: The destination
+  * @src: The source
   */
 
-void swap_int(int *a, int *b)
+char *_strcpy(char *dest, char *src)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	char *copy;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	copy = strcpy(dest, src);
+
+	return (copy);
 }

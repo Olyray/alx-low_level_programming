@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
-  * swap_int - swap the paramenters
-  * @a: The first to be swapped
-  * @b: The second to be swapped
+  * print_array - prints elements of an array
+  * @a: The array in question
+  * @n: The number of elements to be printed
   */
 
-void swap_int(int *a, int *b)
+void print_array(int *a, int n)
 {
-	int ninety_eight = *a;
-	int forty_two  = *b;
-	int *c = a;
-	int *d = b;
+	int i;
 
-	*c = forty_two;
-	*d = ninety_eight;
+	for (i = 0; i < n; i++)
+	{
+		if (i == n - 1)
+			printf("%i", a[i]);
+		else
+			printf("%i, ", a[i]);
+	}
+	printf("\n");
 }
