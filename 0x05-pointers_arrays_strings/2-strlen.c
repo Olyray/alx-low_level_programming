@@ -10,5 +10,7 @@ int _strlen(char *s)
 {
 	int i = 3;
 
+	printf("This is s: %c\n", *s);
+
 	return (i);
 }
