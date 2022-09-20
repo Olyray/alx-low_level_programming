@@ -5,6 +5,7 @@
   * *_strcpy - swap the paramenters
   * @dest: The destination
   * @src: The source
+  * Return: The copied string
   */
 
 char *_strcpy(char *dest, char *src)
