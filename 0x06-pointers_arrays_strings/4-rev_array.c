@@ -2,14 +2,19 @@
 #include <string.h>
 
 /**
-  *  reverse_array - compares two strings
-  * @a: the first string
-  * @n: the second string
+  *  reverse_array - reverses an array
+  * @a: the array to be reversed
+  * @n: the size of the array
   */
 
 void reverse_array(int *a, int n)
 {
-	int i = 5;
-	int j = *a * i;
-	int k = n * i;
+	int i;
+	int b[500];
+
+	for (i = 0; i < n; i++)
+		b[i] = a[(n - 1) - i];
+	for (i = 0; i < n; i++)
+		a[i] = b[i];
+
 }
