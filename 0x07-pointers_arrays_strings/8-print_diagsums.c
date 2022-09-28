@@ -10,24 +10,22 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int j;
+	int j = 0;
+	int k = size - 1;
 	int left_diagonal;
 	int right_diagonal;
 
 	for (i = 0; i < size; i++)
 	{
-		j = 0;
-		left_diagonal += a[i][j];
+		left_diagonal += a[i * size + j];
 		j++;
 	}
 
 	for (i = 0; i < size; i++)
 	{
-		j = size;
-		right_diagonal += a[i][j];
-		j--;
+		right_diagonal += a[i * size + k];
+		k--;
 	}
 
-	printf("%i, %i", left_diagonal, right_diagonal);
-	
+	printf("%i, %i\n", left_diagonal, right_diagonal);
 }
