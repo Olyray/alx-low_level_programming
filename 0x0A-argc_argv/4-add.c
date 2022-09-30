@@ -12,30 +12,27 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int check_number;
-	int addition;
+	int check_number = 0;
+	int addition = 0;
 
 	if (argc <= 1)
 	{
 		printf("0\n");
-		return (0);
+	return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		check_number += isdigit(i);
-	}
-	if (check_number == 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else
-	{
-		for (i = 1; i < argc; i++)
+		check_number = isdigit(*argv[i]);
+		if (check_number == 0)
 		{
-			addition += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-		printf("%i\n", addition);
 	}
+	for (i = 1; i < argc; i++)
+	{
+	addition += atoi(argv[i]);
+	}
+	printf("%i\n", addition);
 	return (0);
 }
