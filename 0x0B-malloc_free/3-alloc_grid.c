@@ -9,30 +9,30 @@
  * Return: the pointer to the concatenated string
  */
 
-/*Write a function that returns a pointer to a 2 dimensional array of integers.
-
-    Prototype: int **alloc_grid(int width, int height);
-    Each element of the grid should be initialized to 0
-    The function should return NULL on failure
-    If width or height is 0 or negative, return NULL*/
-
-
 int **alloc_grid(int width, int height)
 {
 	int **array_pointer;
-	int *null_array;
 	int i;
 	int j;
 
-	null_array = malloc(sizeof(int) * (width * height));
-	if (null_array == NULL)
-		return (NULL);
 	if (width <= 0 || height <= 0)
+	return (NULL);
+
+	array_pointer = malloc(sizeof(int *) * width);
+	if (array_pointer == NULL)
 		return (NULL);
 	for (i = 0; i < width; i++)
+	{
+		array_pointer[i] = malloc(sizeof(int) * height);
+		if (array_pointer[i] == NULL)
+		{
+			free(array_pointer[i]);
+			free(array_pointer);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < width; i++)
 		for (j = 0; j < height; j++)
-			null_array[i * height + j] = 0;
-	array_pointer = &null_array;
+			array_pointer[i][j] = 0;
 	return (array_pointer);
-
 }
