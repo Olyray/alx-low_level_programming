@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <string.h>
 
 /**
  * free_listint - frees a list
@@ -6,7 +7,12 @@
  */
 void free_listint(listint_t *head)
 {
-	if (head->next != NULL)
-		free_listint(head->next);
-	free (head);
+	listint_t *traverse;
+
+	while (head)
+	{
+		traverse = head->next;
+		free(head);
+		head = traverse;
+	}
 }
