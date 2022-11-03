@@ -23,6 +23,8 @@ int main(int argc, char *argv[])
 	}
 
 	buffer = malloc(sizeof(char) * read_bytes);
+	if (buffer == NULL)
+		exit(99);
 	/*Open file_from and if it returns -1 exit with code 98*/
 	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -40,7 +42,7 @@ int main(int argc, char *argv[])
 	/*Create while loop to read from file_from with condition of > 0*/
 	while ((read_check = read(file_from, buffer, read_bytes)) > 0)
 	{
-		write_check = write(file_to, buffer, read_bytes);
+		write_check = write(file_to, buffer, read_check);
 		/*Write to file_to*/
 		if (write_check == -1)
 		{
