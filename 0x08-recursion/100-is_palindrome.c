@@ -4,23 +4,24 @@
 #include "main.h"
 
 /**
- * palindrome_check - checks for palindrome
- * @s: the original string
- * @len: the length of the string
- * @index: the iteration number
- * Return: 1 or 0
+ * reverse_string - checks for palindrome
+ * @checker: the checking string
+ * @string: the original string
+ * @string_len: the length of the string
+ * @index: the index for iteration
+ * Return: the checker
  */
-int palindrome_check(char *s, int len, int index)
+char *reverse_string(char *checker, char *string, int string_len, int index)
 {
-	if (s[index] == s[len / 2])
-		return (1);
-
-	if (s[index] == s[len - index - 1])
-		return (palindrome_check(s, len, index + 1));
-
-	return (0);
+	if (index == string_len)
+	{
+		return (checker);
+	}
+	checker[index] = string[(string_len - 1) - index];
+	index++;
+	checker = reverse_string(checker, string, string_len, index);
+	return (checker);
 }
-
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: the string to checks
@@ -28,11 +29,15 @@ int palindrome_check(char *s, int len, int index)
  */
 int is_palindrome(char *s)
 {
-	int index = 0;
-	int len = strlen(s);
+	char *checker;
+	int i = 0, string_len;
 
-	if (!(*s))
+	string_len = strlen(s);
+	checker = malloc(sizeof(checker) * strlen(s));
+	checker = reverse_string(checker, s, string_len, i);
+
+	if (strcmp(checker, s) == 0)
 		return (1);
-
-	return (palindrome_check(s, len, index));
+	else
+		return (0);
 }
