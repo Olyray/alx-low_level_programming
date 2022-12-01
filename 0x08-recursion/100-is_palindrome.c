@@ -4,23 +4,35 @@
 #include "main.h"
 
 /**
+ * palindrome_check - checks for palindrome
+ * @s: the original string
+ * @len: the length of the string
+ * @index: the iteration number
+ * Return: 1 or 0
+ */
+int palindrome_check(char *s, int len, int index)
+{
+	if (s[index] == s[len / 2])
+		return (1);
+
+	if (s[index] == s[len - index - 1])
+		return (palindrome_check(s, len, index + 1));
+
+	return (0);
+}
+
+/**
  * is_palindrome - checks if a string is a palindrome
  * @s: the string to checks
  * Return: 1 if it is a palindrome, 0 if it is not
  */
 int is_palindrome(char *s)
 {
-	char *checker;
-	int i, string_len;
+	int index = 0;
+	int len = strlen(s);
 
-	string_len = strlen(s);
-	checker = malloc(sizeof(checker) * strlen(s));
-	for (i = 0; i < (int)strlen(s); i++)
-	{
-		checker[i] = s[(string_len - 1) - i];
-	}
-	if (strcmp(checker, s) == 0)
+	if (!(*s))
 		return (1);
-	else
-		return (0);
+
+	return (palindrome_check(s, len, index));
 }
